@@ -45,7 +45,7 @@ console.log(teacher3)
 
 ### Expected Output:
 
-```output
+```Expected Output:
 {
 firstName: 'John',
 lastName: 'Doe',
@@ -62,3 +62,50 @@ contract: false
 - webpack.config.js: Webpack configuration.
 - js/main.ts: Implementation of the Teacher interface and examples.
 - .gitignore: Excludes unnecessary files (e.g., node_modules and dist) from version control.
+
+## Task 1: Extending the Teacher Interface with Directors
+
+### Description
+
+This project demonstrates how to extend an interface in TypeScript. The `Directors` interface is created by extending the `Teacher` interface and introducing a new property, `numberOfReports`.
+
+### Requirements
+
+1. **Teacher Interface**:
+
+   - `firstName` (string): Read-only, modifiable only during initialization.
+   - `lastName` (string): Read-only, modifiable only during initialization.
+   - `fullTimeEmployee` (boolean): Always required.
+   - `yearsOfExperience` (number): Optional.
+   - `location` (string): Always required.
+   - Additional dynamic properties are allowed.
+
+2. **Directors Interface**:
+   - Extends the `Teacher` interface.
+   - Includes an additional property: `numberOfReports` (number), which is always required.
+
+### Example Usage
+
+```typescript
+// Define a Directors object
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+}
+
+console.log(director1)
+```
+
+```Expected Output:
+{
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17
+}
+
+```
