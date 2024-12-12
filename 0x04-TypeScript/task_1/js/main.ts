@@ -36,8 +36,50 @@ console.log(director1)
 
 // 3. Printing teachers
 
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[0]}. ${lastName}`
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string
 }
 
-console.log(printTeacher('John', 'Doe'))
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`
+}
+
+// Example usage
+console.log(printTeacher('John', 'Doe')) // Output: J. Doe
+
+// 4. Writing a class
+
+interface StudentClassInterface {
+  firstName: string
+  lastName: string
+  workOnHomework(): string
+  displayName(): string
+}
+
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface
+}
+
+class StudentClass implements StudentClassInterface {
+  firstName: string
+  lastName: string
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+
+  workOnHomework(): string {
+    return 'Currently working'
+  }
+
+  displayName(): string {
+    return this.firstName
+  }
+}
+
+// Example
+
+const student = new StudentClass('Miftah', 'Adem')
+console.log(student.workOnHomework()) // output: Currently working
+console.log(student.displayName()) // output: Miftah

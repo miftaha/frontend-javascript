@@ -112,27 +112,65 @@ console.log(director1)
 
 ## Task 1: Printing Teachers
 
-## Description
+### Description
 
-This project involves creating a TypeScript function called `printTeacher` that formats a teacher's name.
+Creating a TypeScript function called `printTeacher` that formats a teacher's name and uses an interface named `printTeacherFunction` to enforce type safety and structure.
 
 ### Requirements
 
-**Functionality**:
+1. **Functionality**:
 
-- Accepts two arguments:
-  - `firstName` (string): The teacher's first name.
-  - `lastName` (string): The teacher's last name.
-- Returns a formatted string in the format: `<First letter of first name>. <Last name>`.
+   - Accepts two arguments:
+     - `firstName` (string): The teacher's first name.
+     - `lastName` (string): The teacher's last name.
+   - Returns a formatted string in the format: `<First letter of first name>. <Last name>`.
 
-## Example Usage
+2. **Interface**:
+   - An interface named `printTeacherFunction` is defined to describe the function's structure.
+
+### Example Usage
 
 ```typescript
 // Define the function
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[0]}. ${lastName}`
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`
 }
 
 // Example usage
 console.log(printTeacher('John', 'Doe')) // Output: J. Doe
+```
+
+## Task 1: Writing a Class
+
+### Description
+
+This task involves creating a TypeScript class `StudentClass` that:
+
+1. Accepts `firstName` and `lastName` as constructor arguments.
+2. Implements two methods:
+   - `workOnHomework`: Returns the string `"Currently working"`.
+   - `displayName`: Returns the `firstName` of the student.
+
+The structure of the class and its constructor is defined using TypeScript interfaces.
+
+```
+interface StudentClassInterface {
+  firstName: string
+  lastName: string
+  workOnHomework(): string
+  displayName(): string
+}
+
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface
+}
+
+```
+
+### Example Usage
+
+```typescript
+const student = new StudentClass('Miftah', 'Adem')
+console.log(student.workOnHomework()) // output: Currently working
+console.log(student.displayName()) // output: Miftah
 ```
