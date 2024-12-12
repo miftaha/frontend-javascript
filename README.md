@@ -109,3 +109,30 @@ console.log(director1)
 }
 
 ```
+
+## Task 1: Printing Teachers
+
+## Description
+
+This project involves creating a TypeScript function called `printTeacher` that formats a teacher's name.
+
+### Requirements
+
+**Functionality**:
+
+- Accepts two arguments:
+  - `firstName` (string): The teacher's first name.
+  - `lastName` (string): The teacher's last name.
+- Returns a formatted string in the format: `<First letter of first name>. <Last name>`.
+
+## Example Usage
+
+```typescript
+// Define the function
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName[0]}. ${lastName}`
+}
+
+// Example usage
+console.log(printTeacher('John', 'Doe')) // Output: J. Doe
+```
