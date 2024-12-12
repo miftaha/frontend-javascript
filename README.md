@@ -174,3 +174,40 @@ const student = new StudentClass('Miftah', 'Adem')
 console.log(student.workOnHomework()) // output: Currently working
 console.log(student.displayName()) // output: Miftah
 ```
+
+## Task 2: Advanced Types Part 1
+
+### Description
+
+This task involves creating two interfaces (`DirectorInterface` and `TeacherInterface`) and their respective classes (`Director` and `Teacher`). A function named `createEmployee` determines whether to create a `Teacher` or `Director` instance based on the provided salary.
+
+### Files Included
+
+- js/main.ts: TypeScript implementation of interfaces, classes, and createEmployee function.
+- package.json: Specifies dependencies and scripts.
+- tsconfig.json: TypeScript configuration.
+- webpack.config.js: Webpack configuration.
+- .gitignore: Excludes unnecessary files.
+
+### Features
+
+1. **Interfaces**:
+
+   - `DirectorInterface`: Defines methods for directors (`workFromHome`, `getCoffeeBreak`, `workDirectorTasks`).
+   - `TeacherInterface`: Defines methods for teachers (`workFromHome`, `getCoffeeBreak`, `workTeacherTasks`).
+
+2. **Classes**:
+
+   - `Director`: Implements `DirectorInterface` with specific method outputs.
+   - `Teacher`: Implements `TeacherInterface` with specific method outputs.
+
+3. **Functionality**:
+   - `createEmployee(salary: number | string)`: Creates a `Teacher` if the salary is a number less than 500, otherwise creates a `Director`.
+
+### Example Usage
+
+```typescript
+console.log(createEmployee(200)) // Teacher instance
+console.log(createEmployee(1000)) // Director instance
+console.log(createEmployee('$500')) // Director instance
+```
