@@ -211,3 +211,23 @@ console.log(createEmployee(200)) // Teacher instance
 console.log(createEmployee(1000)) // Director instance
 console.log(createEmployee('$500')) // Director instance
 ```
+
+## Task 2: Creating functions specific to employees
+
+### Description
+
+This task extends the implementation of the Director and Teacher interfaces using Type Predicate.
+
+### Features
+
+1. **Functions**:
+
+   - `isDirector`: Type predicate to determine if an employee is a `Director`.
+   - `executeWork`: Executes work-specific methods for `Director` or `Teacher` instances.
+
+2. **Usage Example**:
+
+   ```typescript
+   executeWork(teacher) // Getting to work
+   executeWork(director) // Getting to director tasks
+   ```

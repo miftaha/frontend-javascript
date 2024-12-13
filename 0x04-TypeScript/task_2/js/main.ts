@@ -17,13 +17,13 @@ interface TeacherInterface {
 //Director Class
 class Director implements DirectorInterface {
   workDirectorTasks(): string {
-    return 'Working from home'
+    return 'Getting to director tasks'
   }
   getCoffeeBreak(): string {
     return 'Getting a coffee break'
   }
   workFromHome(): string {
-    return 'Getting to director tasks'
+    return 'Working from home'
   }
 }
 
@@ -54,3 +54,21 @@ function createEmployee(salary: number | string): Director | Teacher {
 console.log(createEmployee(200)) //Output: Teacher instance
 console.log(createEmployee(1000)) //output: Director instance
 console.log(createEmployee('$500')) //output: Director instance
+
+// 6. Creating functions specific to employees
+function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined
+}
+
+function executeWork(employee: Director | Teacher): void {
+  if (isDirector(employee)) {
+    console.log(employee.workDirectorTasks())
+  } else {
+    console.log(employee.workTeacherTasks())
+  }
+}
+
+executeWork(createEmployee(200))
+// Getting to work
+executeWork(createEmployee(1000))
+// Getting to director tasks
