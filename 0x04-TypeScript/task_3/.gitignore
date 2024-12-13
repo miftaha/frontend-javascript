@@ -10,10 +10,7 @@ dist/
 *.swp
 *.DS_Store
 
-# Ignore TypeScript build artifacts
-*.js
-*.js.map
-*.d.ts
+
 
 # Ignore IDE or editor config files
 .vscode/
