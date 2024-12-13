@@ -251,3 +251,32 @@ This task focuses on using TypeScript's string literal types.
    console.log(teachClass('Math')) // Output: Teaching Math
    console.log(teachClass('History')) // Output: Teaching History
    ```
+
+## Task 3: Ambient Namespaces
+
+### Description
+
+using ambient namespaces in TypeScript to define types for external JavaScript libraries and integrating them with strongly typed interfaces.
+
+### Features
+
+1. **interface.ts:** Defines the RowID type and RowElement interface.
+2. **crud.js:** External JavaScript library for row operations.
+3. **crud.d.ts:** Ambient TypeScript file with type declarations for crud.js.
+4. **main.ts:** Main TypeScript file to demonstrate CRUD operations.
+
+### Expected Output
+
+```
+const obj = {firstName: "Guillaume", lastName: "Salva"};
+CRUD.insertRow(obj)
+// Insert row {firstName: "Guillaume", lastName: "Salva"}
+
+const updatedRow: RowElement = { firstName: "Guillaume", lastName: "Salva", age: 23 };
+CRUD.updateRow(newRowID, updatedRow);
+// Update row 125 {firstName: "Guillaume", lastName: "Salva", age: 23}
+
+CRUD.deleteRow(125);
+// Delete row id 125
+
+```
