@@ -280,3 +280,87 @@ CRUD.deleteRow(125);
 // Delete row id 125
 
 ```
+
+## Task 4: Namespace & Declaration Merging
+
+This project demonstrates the use of namespaces and declaration merging in TypeScript.
+
+## Task 5: Brand Convention & Nominal Typing
+
+### Description
+
+This task demonstrates the use of nominal typing and brand convention in TypeScript
+
+### Features
+
+**Sum Functions:**
+
+- sumMajorCredits: Sums MajorCredits values.
+- sumMinorCredits: Sums MinorCredits values.
+
+```
+// Examples
+
+console.log(
+  'Total Major',
+  sumMajorCredits(
+    { credits: 100, name: 'major' },
+    { credits: 50, name: 'major' }
+  )
+) //output :Total Major {name: 'major', credits: 150}
+console.log(
+  'Total Minor',
+  sumMinorCredits(
+    { credits: 50, name: 'minor' },
+    { credits: 20, name: 'minor' }
+  )
+) //output: Total Minor {name: 'minor', credits: 70}
+```
+
+## Setup Instructions
+
+1. **Clone the repository:**
+
+```
+git clone https://github.com/miftaha/frontend-javascript.git
+cd alx-frontend-javascript/0x04-TypeScript/task-0
+
+```
+
+```
+git clone https://github.com/miftaha/frontend-javascript.git
+cd alx-frontend-javascript/0x04-TypeScript/task-1
+
+```
+
+```
+git clone https://github.com/miftaha/frontend-javascript.git
+cd alx-frontend-javascript/0x04-TypeScript/task-2
+
+```
+
+```
+git clone https://github.com/miftaha/frontend-javascript.git
+cd alx-frontend-javascript/0x04-TypeScript/task-3
+
+```
+
+```
+git clone https://github.com/miftaha/frontend-javascript.git
+cd alx-frontend-javascript/0x04-TypeScript/task-5
+
+```
+
+2. **Install dependencies:**
+
+```
+npm install
+
+```
+
+3. **Build the project:**
+
+```
+npm run build
+
+```
