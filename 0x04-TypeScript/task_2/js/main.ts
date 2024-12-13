@@ -72,3 +72,19 @@ executeWork(createEmployee(200))
 // Getting to work
 executeWork(createEmployee(1000))
 // Getting to director tasks
+
+// 7. String literal types
+type Subjects = 'Math' | 'History'
+
+function teachClass(todayClass: Subjects) {
+  if (todayClass === 'Math') {
+    return 'Teaching Math'
+  } else {
+    return 'Teaching History'
+  }
+}
+
+console.log(teachClass('Math'))
+// Teaching Math
+console.log(teachClass('History'))
+// Teaching History

@@ -231,3 +231,23 @@ This task extends the implementation of the Director and Teacher interfaces usin
    executeWork(teacher) // Getting to work
    executeWork(director) // Getting to director tasks
    ```
+
+## Task 2: String literal types
+
+### Description
+
+This task focuses on using TypeScript's string literal types.
+
+### Features
+
+1. **Functions**:
+
+   - `Subjects `: type that allows only `Math` or `History` as valid values.
+   - `teachClass`: function returns `Teaching Math` if the input is `Math` and `Teaching History` if the input is `History`.
+
+2. **Usage Example**:
+
+   ```typescript
+   console.log(teachClass('Math')) // Output: Teaching Math
+   console.log(teachClass('History')) // Output: Teaching History
+   ```
